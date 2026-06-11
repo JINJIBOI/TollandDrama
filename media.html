@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cast &amp; Crew</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+<body>
+<div id="wrapper">
+	<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Tolland Drama</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">THS</a></li>
+							<li><a href="generic.html">Past Shows</a></li>
+							<li><a href="castcrew.html">Cast and Crew</a></li>
+							<li class="active"><a href="media.html">Media</a></li>
+							<li><a href="https://gofan.co/app/school/CT17494_2" target="_blank">Buy Tickets Now!</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.instagram.com/thsmusicdrama?igsh=aHszeW93bnJzanBl" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+					</nav>
+    <div id="loginForm">
+        <h2>Protected Page Access</h2>
+        <p>Please enter the password to view protected content:</p>
+        <form id="passwordForm">
+            <input type="password" id="passwordInput" placeholder="Enter Password" required>
+            <br>
+            <button type="button" onclick="validatePassword()">Access Content</button>
+        </form>
+        <div id="errorMsg" class="error"></div>
+    </div>
+    
+    <div id="container">
+					<div id="main">
+						<section class="posts">
+							<article>
+								<header>
+									<h2>Hadestown</h2>
+								</header>
+							<a href="https://photos.google.com/share/AF1QipN4-OxO1FhEE248Lz_I__KIOua_LoJOTW_qkLIpNcc85vOgpCmn0i_juUQc2bQ3vg?pli=1&key=SWs4YnlYa25vRlVDekNCUVJoMHdWVU56SU9ON0VR&authuser=0" target="_blank"><img src="images/hadestown.jpg" class="image fit"></a>
+							</article>
+							<article>
+								<header>
+									<h2>Phantom</h2>
+								</header>
+								<a href="https://drive.google.com/drive/mobile/folders/1HuQFFMgaYCkbhedt2hfu6rOATDY5aich" target="_blank"><img src="images/Phantom.jpg" class="image fit"></a>
+							</article>
+							<article>
+								<header>
+									<h2>Footloose 2020</h2>
+								</header>
+								<a href="https://drive.google.com/drive/folders/161KOdsWTTc9s55WZvuUHtFDdRUOKmXrT?usp=classroom_web&authuser=0" target="_blank"><img src="images/lesscolor.JPG" class="image fit"></a>
+							</article>
+						</section>
+						
+					</div>
+				<button onclick="logout()" class="large button">Logout</button>
+	</div>
+    <!-- Footer -->
+					
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; 2026 Tolland High School. All Rights Reserved.</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+
+    <script>
+        const correctPassword = "TollandDrama";
+        
+        function validatePassword() {
+            const inputPassword = document.getElementById("passwordInput").value;
+            const errorMsg = document.getElementById("errorMsg");
+            
+            if (inputPassword === correctPassword) {
+                // Hide login form and show protected content
+                document.getElementById("loginForm").style.display = "none";
+                document.getElementById("container").style.display = "block";
+                errorMsg.textContent = "";
+            } else {
+                // Show error message
+                errorMsg.textContent = "Incorrect password! Please try again.";
+                document.getElementById("passwordInput").value = "";
+                document.getElementById("passwordInput").focus();
+            }
+        }
+        
+        function logout() {
+            // Hide protected content and show login form
+            document.getElementById("container").style.display = "none";
+            document.getElementById("loginForm").style.display = "block";
+            document.getElementById("passwordInput").value = "";
+        }
+        
+        // Allow Enter key to submit
+        document.getElementById("passwordInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                validatePassword();
+            }
+        });
+    </script>
+	
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
